@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NzMessageService} from "ng-zorro-antd/message";
 import {NzCarouselComponent} from "ng-zorro-antd/carousel";
 import {NewsHomeService} from "../news-home-service/news-home.service";
-import {CanterNews} from "../news-home-service/news-home-mock-data";
+import {CanterNews, cneter_bottom_news} from "../news-home-service/news-home-mock-data";
 
 @Component({
     selector: 'app-news-mian-center',
@@ -42,10 +42,9 @@ export class NewsMianCenterComponent implements OnInit, OnDestroy {
 
     curretType = "要闻";
 
-    listDatas:CanterNews[] = [];
+    listDatas:CanterNews[] = cneter_bottom_news;
 
     constructor(private service:NewsHomeService) {
-
 
     }
     //是否选择了更多
@@ -54,19 +53,8 @@ export class NewsMianCenterComponent implements OnInit, OnDestroy {
         return filterArray.length != 0;
     }
 
-
-    getData(){
-        this.service.getCenterNewsDatas().subscribe((data:any)=>{
-            console.log("NewsMianCenterComponent===", data);
-            if (data != null && data.length){
-                this.listDatas = data;
-
-            }
-        })
-    }
-
     ngOnInit(): void {
-        this.getData();
+
     }
 
     ngOnDestroy(): void {

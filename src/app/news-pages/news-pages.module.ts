@@ -18,10 +18,11 @@ import {NzCarouselModule} from "ng-zorro-antd/carousel";
 import {NzTabsModule} from "ng-zorro-antd/tabs";
 import {PositionTestComponent} from "./news-home/position-test/position-test.component";
 import {FormsModule} from "@angular/forms";
-import {NzImageModule} from "ng-zorro-antd/experimental/image";
+// import {NzImageModule} from "ng-zorro-antd/experimental/image";
 import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 import {QRCodeComponent, QRCodeModule} from "angular2-qrcode";
 import {NewsMainRightCarouselComponent} from "./news-home/news-main-right-carousel/news-main-right-carousel.component";
+import {NzImageModule} from "ng-zorro-antd/image";
 
 
 
@@ -57,6 +58,7 @@ import {NewsMainRightCarouselComponent} from "./news-home/news-main-right-carous
         NzImageModule,
         NzDropDownModule,
         QRCodeModule,
+        NzImageModule,
 
 
     ],

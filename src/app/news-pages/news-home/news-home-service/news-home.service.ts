@@ -10,7 +10,7 @@ export class NewsHomeService {
   }
 
   getCenterNewsDatas(){
-    return  this.http.get('/assets/json/home-center-news.json');
+    return  this.http.get('./assets/json/home-center-news.json');
   }
 
 }

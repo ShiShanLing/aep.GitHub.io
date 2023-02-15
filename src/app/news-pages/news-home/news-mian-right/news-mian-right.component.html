@@ -73,6 +73,7 @@
                 <a class="title" style="width: 15px;text-align: center;color: #888888">·</a>
                 <a class="title title-hover">航空</a>
             </div>
+
             <div class="news-head-img news-head-img-mil">
                 <a><img src="https://cms-bucket.ws.126.net/2023/0213/faf926c1j00rpzwd90020c000s600e3c.jpg?imageView&thumbnail=300y150&type=webp"></a>
                 <div class="img-head-title-bg">
@@ -140,7 +141,7 @@
             <a class="title">{{newsModel.title}}</a>
         </div>
         <div class="news-head-img news-head-img-150">
-            <nz-image [nzSrc]="newsModel.img.src"></nz-image>
+            <img nz-image [nzSrc]="newsModel.img.src">
             <div class="img-head-title-bg">
                 <h3>{{newsModel.img.title}}</h3>
             </div>

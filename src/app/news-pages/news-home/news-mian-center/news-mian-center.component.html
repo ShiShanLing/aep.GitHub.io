@@ -48,9 +48,8 @@
                 </div>
             </div>
 
-            <nz-list-item  class="nz-list-item-pandding-margin-zore" *ngFor="let item of listDatas;let j = index">
-
-                <nz-image nzWidth="140" [nzSrc]="item.imgurl"></nz-image>
+            <nz-list-item  class="nz-list-item-pandding-margin-zore" *ngFor="let item of listDatas;let j = index">;">
+                <img nz-image nzWidth="140" [nzSrc]="item.imgurl" alt="">
                 <div class="content_details_Box">
                     <h3 class="newTitle">
                         {{item.title}}

@@ -49,10 +49,10 @@
             </div>
 
             <nz-list-item [routerLink]="['/news_details']" target="_blank" class="nz-list-item-pandding-margin-zore" *ngFor="let item of listDatas;let j = index">
-                <img nz-image src="http://cms-bucket.ws.126.net/2023/0220/a1fe4db5p00rqd04m00b0c0009c0070c.png?imageView&thumbnail=140y88&quality=85"  [alt]="item.title">
+                <img nz-image [nzSrc]="item.imgurl" [alt]="item.title">
                 <div class="content_details_Box">
                     <h3>
-                        <a class="newTitle" [routerLink]="['/news_details']" target="_blank">{{item.title}}-111-<i style="color:red;">{{curretType}}</i></a>
+                        <a class="newTitle" [routerLink]="['/news_details']" target="_blank">{{item.title}}--<i style="color:red;">{{curretType}}</i></a>
                     </h3>
                     <div class="news_tag">
                         <a href='http://localhost:4200/identy' class='link_more'><em>新闻</em></a>

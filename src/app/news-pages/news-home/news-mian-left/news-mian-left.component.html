@@ -1,0 +1,38 @@
+
+<div class="containerBox">
+    <div class="header-background">
+        <div class="news_left_header-sticky">
+            <h2>
+                <span>新闻各有态度</span>
+            </h2>
+        </div>
+    </div>
+    <div class="container">
+        <cdk-virtual-scroll-viewport itemSize="73" class="demo-infinite-container">
+            <nz-list class="nz_list" id="nz_list" nzSplit="false">
+                <nz-list-item *ngFor="let data of dataSource; let i = index" style="padding:0">
+                    <div class="news_left_item" (mouseleave)="leaveLiItem(details_img)">
+                        <div  [class]="'tags ' + data.type" ></div>
+                        <div class="column_main">
+                            <div class="details" >
+                                <a [routerLink]="['/news_details']" target="_blank">
+                                    <h3 (mouseenter)="hoverTitle(details_img)" (mouseleave)="leaveTitle()" >{{data.main_news.title}}</h3>
+                                    <img #details_img class="photo" alt="{{data.main_news.title}}" src="{{data.main_news.imgUrl}}" >
+                                </a>
+                                <ul >
+                                    <ng-container *ngFor="let other of data.other_news">
+                                        <li><a [routerLink]="['/news_details']" target="_blank">{{other.title}}</a></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                        </div>
+                        <nz-divider style="margin: 20px 0 0 0"></nz-divider>
+                    </div>
+                </nz-list-item>
+            </nz-list>
+        </cdk-virtual-scroll-viewport>
+    </div>
+
+</div>
+
+

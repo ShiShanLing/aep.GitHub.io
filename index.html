@@ -4,9 +4,25 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 <link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+
 <body>
   <app-root></app-root>
+  <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 <script src="runtime.e1b61a1002315ef8.js" type="module"></script><script src="polyfills.63e5f5146eb01910.js" type="module"></script><script src="main.b1f98bb4c85dde54.js" type="module"></script>
+
 
 </body></html>

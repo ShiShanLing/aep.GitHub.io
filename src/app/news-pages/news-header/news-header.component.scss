@@ -1,0 +1,301 @@
+:host{
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  height: 45px;
+  position: relative;
+  display: flex;
+  button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+  }
+}
+
+
+.leftContent{
+  height: 45px;
+  background-color: #333;
+  display: flex;
+  flex: 1;
+  //float: left;
+}
+
+.rightContext{
+  flex: 0;
+  background-color: #333;
+  display: flex;
+
+}
+
+//他的作用,高度和container 一致,然后鼠标移动到上面做一些操作.
+.text-box{
+
+}
+
+.label{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10.5px;
+  height: 19px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+
+
+.text-box:hover .label{
+  border-bottom: 1px solid white;
+}
+
+.button-box{
+  &:hover{
+    background-color: #171717;
+  }
+  .menuBtnBox{
+    margin-top:11px;
+    color:white;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    display: flex;
+    height: 34px;
+
+    .headButton-icon {
+      background-image: url(https://static.ws.126.net/163/f2e/commonnav2019/images/products_sprites20181029.svg),none;
+      width: 48px;
+      height: 23px;
+      background-repeat: no-repeat;
+    }
+    //网易app
+    .newsapp-icon {
+      width: 25px;
+      background-position: 0 -138px;
+    }
+    //公开课
+    .gongkaike-icon{
+      background-position: 0 -114px;
+      width: 48px;
+      margin-right: -5px;
+    }
+    .yanxuan-icon {
+      margin-left: 5px;
+      margin-right: -10px;
+      background-position: 0 -162px;
+      width: 46px;
+    }
+    .account-cion {
+      background-position: 0 -69px;
+      width: 25px;
+    }
+    .email-icon{
+      background-position: 0 -46px;
+      width: 25px;
+    }
+
+
+  }
+  //公开课label
+  .MOOCLabel{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .login{
+    width: 70px;
+    height: 44px;
+    line-height: 44px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a{
+      color: white;
+    }
+    &:hover {
+      background-color: red;
+    }
+    &:hover a{
+      text-decoration: underline;
+    }
+
+
+
+  }
+  //带有动画的汉堡菜单
+  .hamburger-menu {
+    height: 100%;
+    width: 68px;
+    a{
+      display: inline-block;
+      height: 45px;
+      width: 100%;
+
+      .meun1{
+        display: inline-block;
+        margin: 13px 2px 0;
+        transition: transform .4s;
+        height: 2px;
+        width: 24px;
+        display: block;
+        background-color: white;
+      }
+
+      .meun2{
+        display: inline-block;
+        margin: 6px 2px 0;
+        height: 2px;
+        width: 24px;
+        display: block;
+        background-color: white;
+      }
+      .meun3{
+        display: inline-block;
+        margin: 6px 2px ;
+        transition: transform .4s;
+        height: 2px;
+        width: 24px;
+        display: block;
+        background-color: white;
+      }
+       & :hover .menu1 {
+        -webkit-transform:translate(0,-2px);
+        -ms-transform:translate(0,-2px);
+        -o-transform:translate(0,-2px);
+        transform:translate(0,-2px)
+      }
+      &:hover .menu3 {
+        -webkit-transform:translate(0,2px);
+        -ms-transform:translate(0,2px);
+        -o-transform:translate(0,2px);
+        transform:translate(0,2px)
+      }
+
+    }
+
+  }
+
+}
+
+.icon-arrows {
+  z-index:10;
+  margin: 8.5px 5px;
+  width: 8px;
+  height: 5px;
+  line-height:0;
+  border:0;
+  background:url(https://static.ws.126.net/163/f2e/commonnav2019/images/nav_sprite_v42.png) 0 -704px no-repeat;
+}
+
+.button-box:hover .icon-arrows {
+  transform: rotate(180deg);
+  transition: all 0.25s ease 0s;
+  margin-left: 5px;
+  margin-top: 8.5px;
+}
+
+.divider-line{
+  border-left: 1px solid rgba(195, 195, 195, 0.3);
+}
+
+.nz-dropdown-menu-ul-box{
+  border: 1px solid #cdcdcd;
+  box-shadow: 0 0 8px #cdcdcd;
+  li{
+
+    padding: 0;
+    margin: 0;
+    min-width: 135px;
+    //菜单 li 中 内容的box
+    .meun-li-content-box {
+      //background: yellow;
+      padding: 0;
+      height: 32px;
+      margin: 0 8px 0 8px;
+      width: 100%;
+      border-bottom: 1px dashed #d5d5d5;
+      line-height: 32px;
+      .applicationIcon{
+        display:inline-block;
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 32px;
+        background-image: url(https://static.ws.126.net/163/f2e/commonnav2019/images/nav_sprite_v56.png);
+        background-repeat: no-repeat;
+        height:32px;
+        color: rgba(38, 38, 38, 0.7);
+        font-size: 13px;
+      }
+      //新闻icon
+      .newsapp{
+        background-position: 0 -156px;
+      }
+      //公开课icon
+      .openclass {
+        background-position: 0 -186px;
+      }
+      //高考志愿
+      .gaokaozhiyuan {
+
+        background-position: 0 5px;
+        background-image: url(https://static.ws.126.net/163/f2e/commonnav2019/images/icon_wangyi_gaokao.png);
+      }
+      .hongcai{
+        background-position: 0 -275px;
+      }
+      .yanxuan{
+        background-position: 0 -443px;
+      }
+      .mall{
+        background-position: 0 -413px;
+      }
+      .study {
+        background-position: 0 -590px;
+      }
+      .text{
+        
+      }
+    }
+
+  }
+
+  //可以
+  /*
+  理解为 第一个ul中的所有li
+  ul:first-child li {}
+  理解为ul中的第一个li.
+  ul li:first-child{}
+   */
+  //这里理解问  获取当前class中的li:并且是最后一个   然后修改这个li中的 这个类.
+  & li:last-child {
+    .meun-li-content-box {
+      border-bottom: 0px dashed #d5d5d5;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

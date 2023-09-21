@@ -17,9 +17,7 @@ export class NewsMainCenterCarouselComponent implements OnInit{
   constructor() {
 
   }
-
   ngOnInit() {
-
     if (this.carousel){
       this.carousel.nzAutoPlay = true;
     }
